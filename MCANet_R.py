@@ -110,9 +110,9 @@ class Mlp(nn.Module):
         x = self.drop(x)
         return x
 
-class UNet_Attention_Transformer_Multiscale(nn.Module):
+class MCANet_R(nn.Module):
     def __init__(self, n_channels, n_classes, bilinear=True):
-        super(UNet_Attention_Transformer_Multiscale, self).__init__()
+        super(MCANet_R, self).__init__()
         self.n_channels = n_channels
         self.n_classes = n_classes
         self.bilinear = bilinear
@@ -172,7 +172,7 @@ class UNet_Attention_Transformer_Multiscale(nn.Module):
         return logits
 
 if __name__ == '__main__':
-    model_=UNet_Attention_Transformer_Multiscale(n_channels=3, n_classes=1)
+    model_=MCANet_R(n_channels=3, n_classes=1)
     a=torch.rand(size=(8,3,256,256))
     b=model_(a)
     print(b.shape)
