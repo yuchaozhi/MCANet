@@ -28,6 +28,6 @@ pip install torch torchvision
 ## Usage
 Here is an example of how to use the UNet_Attention_Transformer_Multiscale model for segmentation:
 import torch
-from unet_model import UNet_Attention_Transformer_Multiscale
-model = UNet_Attention_Transformer_Multiscale(n_channels=3, n_classes=1)
+from MCANet_C import MCANet_C
+model = MCANet_C(n_channels=3, n_classes=1)
 
