@@ -1,1 +1,33 @@
 # MCANet
+
+This repository contains the implementation of the MCANet model for gland image segmentation tasks.
+
+## Model Architecture
+
+The architecture consists of the following components:
+
+### 1. **PMA**
+   - We propose parallel multi-scale attention (PMA) mechanism, which preserves the spatial position information of pixels through the aggregation of cross-channel and multi-scale information so as to more accurately distinguish the edge region from other regions of glandular images.
+
+### 2. **CDA**
+   - We propose a Cross-Dimensional Attention (CDA) mechanism, which captures dependencies across the $(C, H)$, $(C, W)$, and $(H, W)$ dimensions through three separate branches. This enables interactive modelling of channel and spatial dimensions in complex gland images to improve the accuracy of gland image segmentation.
+
+### 3. **Attention Embedding Fusion**
+   - We employ a feature embedding fusion method that effectively combines the original features and attention feature embeddings through weighted summation. This approach leverages the relationships between the edges, morphology, and neighboring tissues of the glands, as well as the spatial relationships within the glands. It enhances feature representation optimization in gland image segmentation, ensuring semantic consistency in complex medical images and accurately segmenting key structures.
+
+### 4. **Multi-scale Skip Connection**
+   - We design a multi-scale skip connection module to fuse features from different semantic scales. This module not only preserves detailed information but also enhances the model's contextual awareness, enabling effective extraction and fusion of both local and global information for gland image segmentation.
+
+## Installation
+
+You can install the necessary dependencies using `pip`:
+
+```bash
+pip install torch torchvision
+
+## Usage
+Here is an example of how to use the UNet_Attention_Transformer_Multiscale model for segmentation:
+import torch
+from unet_model import UNet_Attention_Transformer_Multiscale
+model = UNet_Attention_Transformer_Multiscale(n_channels=3, n_classes=1)
+
