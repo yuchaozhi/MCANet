@@ -30,7 +30,7 @@ pip install torch torchvision
 ```
 
 ## Usage
-Here is an example of how to use the UNet_Attention_Transformer_Multiscale model for segmentation:
+Here is an example of how to use the MCANet for segmentation:
 ```bash
 import torch
 from MCANet_C import MCANet_C
