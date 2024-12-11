@@ -34,3 +34,7 @@ import torch
 from MCANet_C import MCANet_C
 model = MCANet_C(n_channels=3, n_classes=1)
 
+import torch
+from MCANet_R import MCANet_R
+model = MCANet_R(n_channels=3, n_classes=1)
+
