@@ -27,14 +27,18 @@ You can install the necessary dependencies using `pip`:
 
 ```bash
 pip install torch torchvision
+```
 
 ## Usage
 Here is an example of how to use the UNet_Attention_Transformer_Multiscale model for segmentation:
+```bash
 import torch
 from MCANet_C import MCANet_C
 model = MCANet_C(n_channels=3, n_classes=1)
+```
 
+```bash
 import torch
 from MCANet_R import MCANet_R
 model = MCANet_R(n_channels=3, n_classes=1)
-
+```
