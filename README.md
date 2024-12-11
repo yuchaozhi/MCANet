@@ -1,6 +1,6 @@
 # MCANet
 
-This is the official repository of **Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation**
+This is the official repository of **Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation.**
 
 # Prepare data
 Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/21540159/1?file=38179080).
