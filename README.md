@@ -2,6 +2,9 @@
 
 This repository contains the implementation of the MCANet model for gland image segmentation tasks.
 
+# Prepare data
+Detailed data is available [here]([https://your-link.com](https://figshare.com/articles/dataset/EBHISEG/21540159/1?file=38179080 )
+
 ## Model Architecture
 The architecture consists of the following components:
 [View the PDF](./pdf/MCANet.pdf)
