@@ -128,8 +128,8 @@ class MCANet_R(nn.Module):
         self.up4 = Up(256, 64, bilinear)
         self.outc = OutConv(128, n_classes)
 
-        self.trip=CDA()
-        self.ema=PMA(512)
+        self.cda=CDA()
+        self.pma=PMA(512)
 
     def forward(self, x):
         x1 = self.inc(x)
@@ -141,13 +141,13 @@ class MCANet_R(nn.Module):
 
         '''Setting 1'''
         print(x5.shape)
-        x5_trip=self.trip(x5)
+        x5_cda=self.cda(x5)
 
         '''Setting 2'''
 
-        x5_ema= self.ema(x5)
+        x5_pma= self.pma(x5)
 
-        x5 = x5_trip+x5_ema+x5
+        x5 = x5_cda+x5_pma+x5
 
 
         x6 = self.up1(x5, x4)
