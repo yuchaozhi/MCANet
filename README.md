@@ -1,6 +1,6 @@
 # MCANet
 
-This repository contains the implementation of the MCANet model for gland image segmentation tasks.
+This is the official repository of **Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation**
 
 # Prepare data
 Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/21540159/1?file=38179080).
@@ -10,11 +10,11 @@ The architecture consists of the following components:
 [View the PDF](./pdf/MCANet.pdf).
 
 ### 1. **PMA**
-   We propose a parallel multi-scale attention (PMA) mechanism, which preserves pixels' spatial position information through the aggregation of cross-channel and multi-scale information to more accurately distinguish the edge region from other regions of glandular images.
+   - We propose parallel multi-scale attention (PMA) mechanism, which preserves pixels' spatial position information through the aggregation of cross-channel and multi-scale information to more accurately distinguish the edge region from other regions of glandular images.
 [View the PDF](./pdf/PMA.pdf).
 
 ### 2. **CDA**
-   We propose a Cross-Dimensional Attention (CDA) mechanism that captures dependencies across the $(C, H)$, $(C, W)$, and $(H, W)$ dimensions through three separate branches. This enables interactive modeling of channel and spatial dimensions in complex gland images to improve the accuracy of gland image segmentation.
+   - We propose a Cross-Dimensional Attention (CDA) mechanism that captures dependencies across the $(C, H)$, $(C, W)$, and $(H, W)$ dimensions through three separate branches. This enables interactive modeling of channel and spatial dimensions in complex gland images to improve the accuracy of gland image segmentation.
 [View the PDF](./pdf/CDA.pdf).
 
 ### 3. **Attention Embedding Fusion**
