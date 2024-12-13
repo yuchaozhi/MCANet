@@ -10,7 +10,7 @@ Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/
 
 ## Model Architecture
 The architecture consists of the following components:
-[View the PDF](./pdf/MCANet.pdf).
+![Model Architecture](./figures/MCANet.png)
 
 ### 1. **PMA**
    - We propose parallel multi-scale attention (PMA) mechanism, which preserves pixels' spatial position information through the aggregation of cross-channel and multi-scale information to more accurately distinguish the edge region from other regions of glandular images.
@@ -26,6 +26,7 @@ The architecture consists of the following components:
 ### 4. **Multi-scale Skip Connection**
    - We design a multi-scale skip connection module to fuse features from different semantic scales. This module not only preserves detailed information but also enhances the model's contextual awareness, enabling effective extraction and fusion of both local and global information for gland image segmentation.
 [View the PDF](./pdf/Multiscale_Skip_Connection.pdf).
+![Multi-scale Skip Connection](./figures/Multiscale_Skip_Connection.png)
 
 ## Installation
 
