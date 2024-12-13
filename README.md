@@ -5,7 +5,7 @@ This is the official repository of **Multi-Scale Cross-Dimensional Attention Net
 # Prepare data
 Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/21540159/1?file=38179080).
 
-# Some gland image features are shown in the figure
+# Some gland image features
 ![Some gland image features](./figures/Gland_image.png)
 
 ## Model Architecture
