@@ -25,7 +25,6 @@ The architecture consists of the following components:
 
 ### 4. **Multi-scale Skip Connection**
    - We design a multi-scale skip connection module to fuse features from different semantic scales. This module not only preserves detailed information but also enhances the model's contextual awareness, enabling effective extraction and fusion of both local and global information for gland image segmentation.
-[View the PDF](./pdf/Multiscale_Skip_Connection.pdf).
 ![Multi-scale Skip Connection](./figures/Multiscale_Skip_Connection.png)
 
 ## Installation
