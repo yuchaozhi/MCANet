@@ -27,11 +27,16 @@ Fig3. The structure of the PMA is shown on the left, while the structure of the 
 ![Multi-scale Skip Connection](./figures/Multiscale_Skip_Connection.png)
 Fig4. The structure of the multi-scale skip connection.
 
-## Performance Comparison
+## Performance Comparison (RQ1)
 ![Performance Comparison](./figures/Comparison.png)
    - As shown in the figure, the segmentation effects of our model and the baseline model are compared.
+
+## Case Study (RQ2)
 ![Performance Comparison](./figures/Performance_Comparison.png)
 Fig5. The comparison of segmentation performance on different glad datasets, where the vertical axis represents the datasets and the horizontal axis represents the methods.
+
+## Ablation Study (RQ3)
+
 
 ## Installation
 
