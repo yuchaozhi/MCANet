@@ -7,6 +7,7 @@ Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/
 
 # Some gland image features
 ![Some gland image features](./figures/Gland_image.png)
+Our motivation is as follows: the heterogeneity of the glands increases the difficulty of gland segmentation. (a) Normal: normal gland tissue, (b) Low-grade IN: low-grade intraepithelial neoplasia, (c) Adenocarcinoma.
 
 ## Model Architecture
 The architecture consists of the following components:
