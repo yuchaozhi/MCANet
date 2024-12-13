@@ -19,10 +19,7 @@ The architecture consists of the following components:
    - We propose a Cross-Dimensional Attention (CDA) mechanism that captures dependencies across the $(C, H)$, $(C, W)$, and $(H, W)$ dimensions through three separate branches. This enables interactive modeling of channel and spatial dimensions in complex gland images to improve the accuracy of gland image segmentation.
 ![Model Architecture](./figures/PMA_&_CDA.png)
 
-### 3. **Attention Embedding Fusion**
-   - We employ a feature embedding fusion method that effectively combines the original features and attention feature embeddings through weighted summation. This approach leverages the relationships between the edges, morphology, and neighboring tissues of the glands, as well as the spatial relationships within the glands. It enhances feature representation optimization in gland image segmentation, ensuring semantic consistency in complex medical images and accurately segmenting key structures.
-
-### 4. **Multi-scale Skip Connection**
+### 3. **Multi-scale Skip Connection**
    - We design a multi-scale skip connection module to fuse features from different semantic scales. This module not only preserves detailed information but also enhances the model's contextual awareness, enabling effective extraction and fusion of both local and global information for gland image segmentation.
 ![Multi-scale Skip Connection](./figures/Multiscale_Skip_Connection.png)
 
