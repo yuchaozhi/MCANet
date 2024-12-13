@@ -11,11 +11,11 @@ The architecture consists of the following components:
 
 ### 1. **PMA**
    - We propose parallel multi-scale attention (PMA) mechanism, which preserves pixels' spatial position information through the aggregation of cross-channel and multi-scale information to more accurately distinguish the edge region from other regions of glandular images.
-[View the PDF](./pdf/PMA & CDA.pdf).
+[View the PDF](./pdf/PMA_&_CDA.pdf).
 
 ### 2. **CDA**
    - We propose a Cross-Dimensional Attention (CDA) mechanism that captures dependencies across the $(C, H)$, $(C, W)$, and $(H, W)$ dimensions through three separate branches. This enables interactive modeling of channel and spatial dimensions in complex gland images to improve the accuracy of gland image segmentation.
-[View the PDF](./pdf/PMA & CDA.pdf).
+[View the PDF](./pdf/PMA_&_CDA.pdf).
 
 ### 3. **Attention Embedding Fusion**
    - We employ a feature embedding fusion method that effectively combines the original features and attention feature embeddings through weighted summation. This approach leverages the relationships between the edges, morphology, and neighboring tissues of the glands, as well as the spatial relationships within the glands. It enhances feature representation optimization in gland image segmentation, ensuring semantic consistency in complex medical images and accurately segmenting key structures.
