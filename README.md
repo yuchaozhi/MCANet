@@ -27,6 +27,12 @@ Fig3. The structure of the PMA is shown on the left, while the structure of the 
 ![Multi-scale Skip Connection](./figures/Multiscale_Skip_Connection.png)
 Fig4. The structure of the multi-scale skip connection.
 
+# Experiment
+We evaluate the effectiveness of MCANet, including MCANet\_C and MCANet\_R, to address the following research questions:
+   - RQ1: Does MCANet outperform the baseline models?
+   - RQ2: How do the different components of MCANet (\emph{e.g.}, PMA) impact the segmentation performance?
+   - RQ3: Can MCANet provide accurate segmentation results?
+
 ## Performance Comparison (RQ1)
 ![Performance Comparison](./figures/Comparison.png)
    - As shown in the figure, the segmentation effects of our model and the baseline model are compared.
