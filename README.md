@@ -36,7 +36,7 @@ Fig4. The structure of the multi-scale skip connection.
 Fig5. The comparison of segmentation performance on different glad datasets, where the vertical axis represents the datasets and the horizontal axis represents the methods.
 
 ## Ablation Study (RQ3)
-
+![Performance Comparison](./figures/Ablation_Study.png)
 
 ## Installation
 
