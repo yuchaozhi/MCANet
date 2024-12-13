@@ -12,6 +12,7 @@ Our motivation is as follows: the heterogeneity of the glands increases the diff
 ## Model Architecture
 The architecture consists of the following components:
 ![Model Architecture](./figures/MCANet.png)
+Illustration of the proposed MCANet for gland segmentation. (a) We design parallel multi-scale attention (PMA) to precisely distinguish between the edge areas of the gland image and other areas. We also design cross-dimensional attention (CDA) to interactively model channels and spatial dimensions in complex gland images. (b) We design multi-scale skip connections to capture the local and global features of glands through cascade connection and residual connection.
 
 ### 1. **PMA**
    - We propose parallel multi-scale attention (PMA) mechanism, which preserves pixels' spatial position information through the aggregation of cross-channel and multi-scale information to more accurately distinguish the edge region from other regions of glandular images.
@@ -19,14 +20,17 @@ The architecture consists of the following components:
 ### 2. **CDA**
    - We propose a Cross-Dimensional Attention (CDA) mechanism that captures dependencies across the $(C, H)$, $(C, W)$, and $(H, W)$ dimensions through three separate branches. This enables interactive modeling of channel and spatial dimensions in complex gland images to improve the accuracy of gland image segmentation.
 ![Model Architecture](./figures/PMA_&_CDA.png)
+The structure of the PMA is shown on the left, while the structure of the CDA is presented on the right.
 
 ### 3. **Multi-scale Skip Connection**
    - We design a multi-scale skip connection module to fuse features from different semantic scales. This module not only preserves detailed information but also enhances the model's contextual awareness, enabling effective extraction and fusion of both local and global information for gland image segmentation.
 ![Multi-scale Skip Connection](./figures/Multiscale_Skip_Connection.png)
+The structure of the multi-scale skip connection.
 
 ## Performance Comparison
    - As shown in the figure, the segmentation effects of our model and the baseline model are compared.
 ![Performance Comparison](./figures/Performance_Comparison.png)
+The comparison of segmentation performance on different glad datasets, where the vertical axis represents the datasets and the horizontal axis represents the methods.
 
 ## Installation
 
