@@ -5,6 +5,18 @@ This is the official repository of **Multi-Scale Cross-Dimensional Attention Net
 # Prepare data
 Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/21540159/1?file=38179080).
 
+### Dataset
+
+| Class              | Train | Validation | Test | Total |
+|:------------------:|:-----:|:----------:|:----:|:-----:|
+| Normal            |  30   |     30     |  16  |  76   |
+| Polyp             | 190   |    190     |  94  | 474   |
+| Low-grade IN      | 256   |    256     | 127  | 639   |
+| High-grade IN     |  74   |     74     |  38  | 186   |
+| Serrated adenoma  |  23   |     23     |  12  |  58   |
+| Adenocarcinoma    | 318   |    318     | 159  | 795   |
+
+
 # Some gland image features
 ![Some gland image features](./figures/Gland_image.png)
 Fig1. Our motivation is as follows: the heterogeneity of the glands increases the difficulty of gland segmentation. (a) Normal: normal gland tissue, (b) Low-grade IN: low-grade intraepithelial neoplasia, (c) Adenocarcinoma.
