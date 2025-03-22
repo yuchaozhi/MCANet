@@ -5,7 +5,8 @@ This is the official repository of **Multi-Scale Cross-Dimensional Attention Net
 # Prepare data
 Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/21540159/1?file=38179080).
 
-### Dataset
+### Dataset descriptions
+We conduct extensive experiments to evaluate the performance of our model using six real-world datasets: Normal, Polyp, Low-grade IN, High-grade IN, Serrated adenoma, and Adenocarcinoma. As shown in Table, these datasets contain pathological images of colorectal tissue. It includes a variety of lesion types, from normal tissue to different levels of epithelial dysplasia, polyps, serrated adenomas, and adenocarcinomas. There are a total of $4,456$ $2D$ pathological images. Each image in these datasets has a size of $224 \times 224$ pixels, and we split the data into training, validation, and test sets in a $4:4:2$ ratio.
 
 | Class              | Train | Validation | Test | Total |
 |:------------------:|:-----:|:----------:|:----:|:-----:|
@@ -15,6 +16,37 @@ Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/
 | High-grade IN     |  74   |     74     |  38  | 186   |
 | Serrated adenoma  |  23   |     23     |  12  |  58   |
 | Adenocarcinoma    | 318   |    318     | 159  | 795   |
+
+### Implementation Detail
+We implement all experiments using Python $3.12.4$ and PyTorch $2.3.1$ on a machine equipped with an NVIDIA GeForce RTX 4070 8GB. The image size is $224 \times 224$.
+
+### Evaluation Metrics
+
+In this paper, we evaluate the model's performance using the mean Dice coefficient (mDice), mean intersection over union (mIoU), accuracy (ACC), recall (Rec), and precision (Pre).
+
+The definitions of the metrics are as follows:
+
+$$
+\text{mDice} = \frac{2 \times \text{TP}}{2 \times \text{TP} + \text{FP} + \text{FN}},
+$$
+
+$$
+\text{mIoU} = \frac{\text{TP}}{\text{TP} + \text{FP} + \text{FN}},
+$$
+
+$$
+\text{ACC} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}},
+$$
+
+$$
+\text{Rec} = \frac{\text{TP}}{\text{TP} + \text{FN}},
+$$
+
+$$
+\text{Pre} = \frac{\text{TP}}{\text{TP} + \text{FP}},
+$$
+
+where TP refers to true positives, FP refers to false positives, TN refers to true negatives, and FN refers to false negatives.
 
 
 # Some gland image features
