@@ -109,3 +109,26 @@ import torch
 from MCANet_R import MCANet_R
 model = MCANet_R(n_channels=3, n_classes=1)
 ```
+
+# Appendix
+## Comparison Table of MCANet and Previous Architectures (Part 1)
+
+| Feature/Method                    | UNet                     | UNet++                  | ResUNet++               | MANet                    | MCANet (Ours)                     |
+|:----------------------------------:|:------------------------:|:-----------------------:|:-----------------------:|:------------------------:|:---------------------------------:|
+| **Key Innovations**               | Symmetric Encoder-Decoder Network | Multi-scale Skip Connections | Residual Skip Connections | Multi-Scale Attention Mechanism | **Multi-Scale Cross-Dimensional Attention** |
+| **Attention Mechanism**           | None                     | None                    | None                    | Multi-Attention Mechanism | **PMA and CDA Synergistic Dual Attention** |
+| **Edge Handling**                 | Basic Convolution         | Multi-scale Information Fusion | Enhanced Boundary Detection | Focuses on Simple Gland Boundaries | **Superior Boundary Preservation** |
+| **Handling of Intra-class Heterogeneity** | Limited                | Limited                 | Limited                 | Enhances Gland Heterogeneity Modeling | **Excellent via Cross-Dimensional Dependencies** |
+
+---
+
+## Comparison Table of MCANet and Previous Architectures (Part 2)
+
+| Feature/Method                    | DA-TransUNet             | Attention UNet          | TransAttUNet             | MCANet (Ours)                     |
+|:----------------------------------:|:------------------------:|:-----------------------:|:-----------------------:|:---------------------------------:|
+| **Key Innovations**               | Transformer and Attention Mechanisms | Attention Mechanism for Focused Region Segmentation | Transformer-based Attention Mechanism | **Multi-Scale Cross-Dimensional Attention** |
+| **Attention Mechanism**           | Dual Attention (Spatial and Channel) | Spatial Attention Mechanism | Multi-Level Attention Mechanism | **PMA and CDA Synergistic Dual Attention** |
+| **Edge Handling**                 | Transformer for Boundary Perception | Focuses on Key Regions, struggles with blurred edges | Attention Mechanism for Boundary Refinement | **Superior Boundary Preservation** |
+| **Handling of Intra-class Heterogeneity** | Models Inter-dimensional Dependencies | Improves Focus but Struggles with Intra-class Variations | Models Complex Structures through Attention | **Excellent via Cross-Dimensional Dependencies** |
+
+
