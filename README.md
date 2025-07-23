@@ -3,7 +3,7 @@
 This is the official repository of **Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation.**
 
 # Prepare data
-Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/21540159/1?file=38179080).
+Detailed data is available [here](https://figshare.com/articles/dataset/EBHISEG/21540159/1?file=38179080). This dataset, named EBHISEG, is a publicly available breast histopathology benchmark released on Figshare by domain experts. All glandular segmentation annotations were conducted and verified by experienced pathologists. As a curated open-access dataset, the ethical approvals, annotation protocols, and inter-rater reliability assessments were managed and ensured by the original authors prior to publication. Therefore, our study directly builds upon this validated and ethically approved resource without involving additional human subject data collection.
 
 ### Dataset descriptions
 We conduct extensive experiments to evaluate the performance of our model using six real-world datasets: Normal, Polyp, Low-grade IN, High-grade IN, Serrated adenoma, and Adenocarcinoma. As shown in Table, these datasets contain pathological images of colorectal tissue. It includes a variety of lesion types, from normal tissue to different levels of epithelial dysplasia, polyps, serrated adenomas, and adenocarcinomas. There are a total of $4,456$ $2D$ pathological images. Each image in these datasets has a size of $224 \times 224$ pixels, and we split the data into training, validation, and test sets in a $4:4:2$ ratio.
