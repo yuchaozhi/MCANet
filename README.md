@@ -131,4 +131,5 @@ model = MCANet_R(n_channels=3, n_classes=1)
 | **Edge Handling**                 | Transformer for Boundary Perception | Focuses on Key Regions, struggles with blurred edges | Attention Mechanism for Boundary Refinement | **Superior Boundary Preservation** |
 | **Handling of Intra-class Heterogeneity** | Models Inter-dimensional Dependencies | Improves Focus but Struggles with Intra-class Variations | Models Complex Structures through Attention | **Excellent via Cross-Dimensional Dependencies** |
 
-
+## Attention Distribution Map
+![Ablation Study](./figures/attention_distributions.png)
