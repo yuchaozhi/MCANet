@@ -133,3 +133,13 @@ model = MCANet_R(n_channels=3, n_classes=1)
 
 ## Attention Distribution Map
 ![Ablation Study](./figures/attention_distributions.png)
+
+**Robustness Evaluation under Additive Gaussian Noise (Simulated OOD Perturbation)**
+
+| Noise Level (σ) | MCANet_C Consistency | MCANet_R Consistency |
+|------------------|----------------------|----------------------|
+| 0.01             | 0.9985               | 0.9977               |
+| 0.05             | 0.9664               | 0.9509               |
+| 0.10             | 0.8877               | 0.8466               |
+| 0.20             | 0.7085               | 0.6371               |
+
