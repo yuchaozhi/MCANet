@@ -17,8 +17,13 @@ We conduct extensive experiments to evaluate the performance of our model using 
 | Serrated adenoma  |  23   |     23     |  12  |  58   |
 | Adenocarcinoma    | 318   |    318     | 159  | 795   |
 
-### Implementation Detail
-We implement all experiments using Python $3.12.4$ and PyTorch $2.3.1$ on a machine equipped with an NVIDIA GeForce RTX 4070 8GB. The image size is $224 \times 224$.
+### Experimental Setup and Implementation Detail
+We implement all experiments using Python $3.12.4$ and PyTorch $2.3.1$ on a server equipped with an NVIDIA GeForce RTX 4070 Ti GPU (8GB VRAM), an AMD Ryzen 7 7745HX CPU, running Windows $11$. The input image size is set to $224 \times 224$ pixels.
+
+We employ a unified training pipeline to enable easy switching among various models by modifying configuration parameters, including classical architectures such as UNet, UNet++, ResUNet++, MANet, Transformer-based models (TransUNet, DA-TransUNet, TransAttUNet), and our proposed MCANet variants (MCANet_C, MCANet_R).
+
+Datasets are preprocessed by resizing images and masks to $224 \times 224$, with consistent data augmentation and normalization applied using torchvision transforms. Training uses a batch size of $4$, with the Adam optimizer and an initial learning rate of $0.001$. The loss function combines Dice loss and BCE loss to better handle class imbalance in segmentation tasks.
+
 
 ### Evaluation Metrics
 
