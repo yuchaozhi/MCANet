@@ -143,3 +143,10 @@ model = MCANet_R(n_channels=3, n_classes=1)
 | 0.10             | 0.8877               | 0.8466               |
 | 0.20             | 0.7085               | 0.6371               |
 
+## How MCANet Might Integrate with Clinical Workflows and Adapt to Other Histological or Biomedical Image Types
+
+MCANet can be integrated into clinical workflows by serving as an automated tool for precise gland segmentation, assisting pathologists in reducing manual annotation time and improving diagnostic consistency. The model processes input histological images to generate segmentation maps that highlight gland structures, which can be directly used for quantitative analysis or as decision support in pathology labs. Its modular design and efficient inference make it suitable for incorporation into digital pathology pipelines and clinical imaging platforms.
+
+To adapt MCANet for other histological or biomedical image types, the input channels (`n_channels`) and output classes (`n_classes`) can be adjusted to match the specific imaging modality and segmentation targets, such as nuclei, blood vessels, or tumors. Additionally, domain-specific data augmentation and transfer learning strategies can be employed to fine-tune the model on new datasets. The modular attention mechanisms (CDA and PMA) can be customized or scaled according to the complexity and structural characteristics of the target images, enabling broad applicability across various biomedical imaging tasks.
+
+
