@@ -24,6 +24,11 @@ We employ a unified training pipeline to enable easy switching among various mod
 
 Datasets are preprocessed by resizing images and masks to $224 \times 224$, with consistent data augmentation and normalization applied using torchvision transforms. Training uses a batch size of $4$, with the Adam optimizer and an initial learning rate of $0.001$. The loss function combines Dice loss and BCE loss to better handle class imbalance in segmentation tasks.
 
+### Training Configuration
+We use `CrossEntropyLoss` (with class-specific weights and `ignore_index=0`) as the loss function. The `Adam` optimizer is adopted, with a base learning rate of `1e-3`, weight decay of `1e-4`, and momentum = `0.9`; a `StepLR` scheduler is used to adjust the learning rate. 
+
+For data augmentation, we applied random flipping, random scaling (scale range `0.5–2.0`), cropping to the target size, and synchronized transformations via `sync_transforms.ComposeWHU`. Training was conducted with a batch size of `2` for both training and validation; `DataLoader` was configured with shuffle and drop-last options.
+
 
 ### Evaluation Metrics
 
