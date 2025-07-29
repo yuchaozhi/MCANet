@@ -141,6 +141,268 @@ model = MCANet_R(n_channels=3, n_classes=1)
 | **Edge Handling**                 | Transformer for Boundary Perception | Focuses on Key Regions, struggles with blurred edges | Attention Mechanism for Boundary Refinement | **Superior Boundary Preservation** |
 | **Handling of Intra-class Heterogeneity** | Models Inter-dimensional Dependencies | Improves Focus but Struggles with Intra-class Variations | Models Complex Structures through Attention | **Excellent via Cross-Dimensional Dependencies** |
 
+
+## Performance comparisons with the baseline methods on the Serrated adenoma and Adenocarcinoma datasets. Based on the results of the paired T-test, use ✓ ($\times$), respectively, to indicate that MCANet\_C is significantly better (worse) than the corresponding methods.
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Model</th>
+      <th colspan="5" style="text-align:center;">Serrated adenoma</th>
+      <th colspan="5" style="text-align:center;">Adenocarcinoma</th>
+    </tr>
+    <tr>
+      <th>mDice</th>
+      <th>mIoU</th>
+      <th>ACC</th>
+      <th>Rec</th>
+      <th>Pre</th>
+      <th>mDice</th>
+      <th>mIoU</th>
+      <th>ACC</th>
+      <th>Rec</th>
+      <th>Pre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UNet</td>
+      <td>0.916 (0.011) ✓</td>
+      <td>0.846 (0.019) ✓</td>
+      <td>0.890 (0.019) ✓</td>
+      <td>0.881 (0.027) ✓</td>
+      <td>0.940 (0.008) ✓</td>
+      <td>0.904 (0.005) ✓</td>
+      <td>0.832 (0.007) ✓</td>
+      <td>0.871 (0.007) ✓</td>
+      <td>0.872 (0.010) ✓</td>
+      <td>0.892 (0.013) ✓</td>
+    </tr>
+    <tr>
+      <td>UNet++</td>
+      <td>0.904 (0.005) ✓</td>
+      <td>0.817 (0.009) ✓</td>
+      <td>0.876 (0.010) ✓</td>
+      <td>0.878 (0.026) ✓</td>
+      <td>0.926 (0.021) ✓</td>
+      <td>0.897 (0.004) ✓</td>
+      <td>0.811 (0.006) ✓</td>
+      <td>0.869 (0.006) ✓</td>
+      <td>0.860 (0.012) ✓</td>
+      <td>0.876 (0.014) ✓</td>
+    </tr>
+    <tr>
+      <td>ResUNet++</td>
+      <td>0.920 (0.008) ✓</td>
+      <td>0.863 (0.015) ✓</td>
+      <td>0.912 (0.025) ✓</td>
+      <td>0.916 (0.008) ✓</td>
+      <td>0.935 (0.010) ✓</td>
+      <td>0.902 (0.008) ✓</td>
+      <td>0.810 (0.017) ✓</td>
+      <td>0.870 (0.009) ✓</td>
+      <td>0.862 (0.010) ✓</td>
+      <td>0.902 (0.013) ✓</td>
+    </tr>
+    <tr>
+      <td>MANet</td>
+      <td>0.898 (0.015) ✓</td>
+      <td>0.828 (0.023) ✓</td>
+      <td>0.877 (0.019) ✓</td>
+      <td>0.885 (0.014) ✓</td>
+      <td>0.929 (0.015) ✓</td>
+      <td>0.865 (0.003) ✓</td>
+      <td>0.774 (0.005) ✓</td>
+      <td>0.833 (0.005) ✓</td>
+      <td>0.857 (0.013) ✓</td>
+      <td>0.891 (0.014) ✓</td>
+    </tr>
+    <tr>
+      <td>DA-TransUNet</td>
+      <td>0.916 (0.019) ✓</td>
+      <td>0.849 (0.033) ✓</td>
+      <td>0.899 (0.020) ✓</td>
+      <td>0.897 (0.033) ✓</td>
+      <td>0.929 (0.011) ✓</td>
+      <td>0.839 (0.005) ✓</td>
+      <td>0.738 (0.008) ✓</td>
+      <td>0.802 (0.007) ✓</td>
+      <td>0.785 (0.012) ✓</td>
+      <td>0.904 (0.014) ✓</td>
+    </tr>
+    <tr>
+      <td>Attention UNet</td>
+      <td>0.923 (0.009) ✓</td>
+      <td>0.873 (0.015) ✓</td>
+      <td>0.905 (0.017) ✓</td>
+      <td>0.935 (0.009) ✓</td>
+      <td>0.923 (0.016) ✓</td>
+      <td>0.889 (0.007) ✓</td>
+      <td>0.821 (0.006) ✓</td>
+      <td>0.864 (0.008) ✓</td>
+      <td>0.898 (0.012) ✓</td>
+      <td>0.901 (0.007) ✓</td>
+    </tr>
+    <tr>
+      <td>TransAttUNet</td>
+      <td>0.920 (0.016) ✓</td>
+      <td>0.853 (0.014) ✓</td>
+      <td>0.902 (0.007) ✓</td>
+      <td>0.914 (0.009) ✓</td>
+      <td>0.925 (0.011) ✓</td>
+      <td>0.876 (0.006) ✓</td>
+      <td>0.802 (0.009) ✓</td>
+      <td>0.851 (0.009) ✓</td>
+      <td>0.871 (0.010) ✓</td>
+      <td>0.903 (0.006) ✓</td>
+    </tr>
+    <tr>
+      <td><strong>MCANet_C</strong></td>
+      <td><strong>0.959 (0.008)</strong></td>
+      <td><strong>0.921 (0.029)</strong></td>
+      <td><strong>0.948 (0.020)</strong></td>
+      <td><strong>0.953 (0.005)</strong></td>
+      <td><strong>0.961 (0.011)</strong></td>
+      <td><strong>0.920 (0.007)</strong></td>
+      <td><strong>0.852 (0.011)</strong></td>
+      <td><strong>0.890 (0.012)</strong></td>
+      <td><strong>0.925 (0.011)</strong></td>
+      <td><strong>0.930 (0.007)</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+
+## Performance comparisons with the baseline methods on the Serrated adenoma and Adenocarcinoma datasets. Based on the results of the paired T-test, use ✓ ($\times$), respectively, to indicate that MCANet\_R is significantly better (worse) than the corresponding methods.
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Model</th>
+      <th colspan="5" style="text-align:center;">Serrated adenoma</th>
+      <th colspan="5" style="text-align:center;">Adenocarcinoma</th>
+    </tr>
+    <tr>
+      <th>mDice</th>
+      <th>mIoU</th>
+      <th>ACC</th>
+      <th>Rec</th>
+      <th>Pre</th>
+      <th>mDice</th>
+      <th>mIoU</th>
+      <th>ACC</th>
+      <th>Rec</th>
+      <th>Pre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UNet</td>
+      <td>0.916 (0.011) ✓</td>
+      <td>0.846 (0.019) ✓</td>
+      <td>0.890 (0.019) ✓</td>
+      <td>0.881 (0.027) ✓</td>
+      <td>0.940 (0.008) ✓</td>
+      <td>0.904 (0.005) ✓</td>
+      <td>0.832 (0.007) ✓</td>
+      <td>0.871 (0.007) ✓</td>
+      <td>0.872 (0.010) ✓</td>
+      <td>0.892 (0.013) ✓</td>
+    </tr>
+    <tr>
+      <td>UNet++</td>
+      <td>0.904 (0.005) ✓</td>
+      <td>0.817 (0.009) ✓</td>
+      <td>0.876 (0.010) ✓</td>
+      <td>0.878 (0.026) ✓</td>
+      <td>0.926 (0.021) ✓</td>
+      <td>0.897 (0.004) ✓</td>
+      <td>0.811 (0.006) ✓</td>
+      <td>0.869 (0.006) ✓</td>
+      <td>0.860 (0.012) ✓</td>
+      <td>0.876 (0.014) ✓</td>
+    </tr>
+    <tr>
+      <td>ResUNet++</td>
+      <td>0.920 (0.008) ✓</td>
+      <td>0.863 (0.015) ✓</td>
+      <td>0.912 (0.025) ✓</td>
+      <td>0.916 (0.008) ✓</td>
+      <td>0.935 (0.010) ✓</td>
+      <td>0.902 (0.008) ✓</td>
+      <td>0.810 (0.017) ✓</td>
+      <td>0.870 (0.009) ✓</td>
+      <td>0.862 (0.010) ✓</td>
+      <td>0.902 (0.013) ✓</td>
+    </tr>
+    <tr>
+      <td>MANet</td>
+      <td>0.898 (0.015) ✓</td>
+      <td>0.828 (0.023) ✓</td>
+      <td>0.877 (0.019) ✓</td>
+      <td>0.885 (0.014) ✓</td>
+      <td>0.929 (0.015) ✓</td>
+      <td>0.865 (0.003) ✓</td>
+      <td>0.774 (0.005) ✓</td>
+      <td>0.833 (0.005) ✓</td>
+      <td>0.857 (0.013) ✓</td>
+      <td>0.891 (0.014) ✓</td>
+    </tr>
+    <tr>
+      <td>DA-TransUNet</td>
+      <td>0.916 (0.019) ✓</td>
+      <td>0.849 (0.033) ✓</td>
+      <td>0.899 (0.020) ✓</td>
+      <td>0.897 (0.033) ✓</td>
+      <td>0.929 (0.011) ✓</td>
+      <td>0.839 (0.005) ✓</td>
+      <td>0.738 (0.008) ✓</td>
+      <td>0.802 (0.007) ✓</td>
+      <td>0.785 (0.012) ✓</td>
+      <td>0.904 (0.014) ✓</td>
+    </tr>
+    <tr>
+      <td>Attention UNet</td>
+      <td>0.923 (0.009) ✓</td>
+      <td>0.873 (0.015) ✓</td>
+      <td>0.905 (0.017) ✓</td>
+      <td>0.925 (0.009) ✓</td>
+      <td>0.923 (0.016) ✓</td>
+      <td>0.889 (0.007) ✓</td>
+      <td>0.821 (0.006) ✓</td>
+      <td>0.864 (0.008) ✓</td>
+      <td>0.898 (0.012) ✓</td>
+      <td>0.901 (0.007) ✓</td>
+    </tr>
+    <tr>
+      <td>TransAttUNet</td>
+      <td>0.920 (0.016) ✓</td>
+      <td>0.853 (0.014) ✓</td>
+      <td>0.902 (0.007) ✓</td>
+      <td>0.914 (0.009) ✓</td>
+      <td>0.935 (0.011) ✓</td>
+      <td>0.876 (0.006) ✓</td>
+      <td>0.802 (0.009) ✓</td>
+      <td>0.851 (0.009) ✓</td>
+      <td>0.871 (0.010) ✓</td>
+      <td>0.903 (0.006) ✓</td>
+    </tr>
+    <tr>
+      <td><strong>MCANet_R</strong></td>
+      <td><strong>0.961 (0.011)</strong></td>
+      <td><strong>0.927 (0.014)</strong></td>
+      <td><strong>0.954 (0.016)</strong></td>
+      <td><strong>0.951 (0.009)</strong></td>
+      <td><strong>0.963 (0.009)</strong></td>
+      <td><strong>0.917 (0.006)</strong></td>
+      <td><strong>0.856 (0.012)</strong></td>
+      <td><strong>0.898 (0.006)</strong></td>
+      <td><strong>0.924 (0.008)</strong></td>
+      <td><strong>0.926 (0.007)</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 ## Attention Distribution Map
 ![Ablation Study](./figures/attention_distributions.png)
 
