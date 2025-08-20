@@ -141,7 +141,7 @@ model = MCANet_R(n_channels=3, n_classes=1)
 | **Edge Handling**                 | Transformer for Boundary Perception | Focuses on Key Regions, struggles with blurred edges | Attention Mechanism for Boundary Refinement | **Superior Boundary Preservation** |
 | **Handling of Intra-class Heterogeneity** | Models Inter-dimensional Dependencies | Improves Focus but Struggles with Intra-class Variations | Models Complex Structures through Attention | **Excellent via Cross-Dimensional Dependencies** |
 
-
+<!-- 
 ## Performance comparisons with the baseline methods on the Serrated adenoma and Adenocarcinoma datasets. Based on the results of the paired T-test, use ✓ ($\times$), respectively, to indicate that MCANet\_C is significantly better (worse) than the corresponding methods.
 <table>
   <thead>
@@ -400,7 +400,7 @@ model = MCANet_R(n_channels=3, n_classes=1)
     </tr>
   </tbody>
 </table>
-
+-->
 
 
 ## Attention Distribution Map
