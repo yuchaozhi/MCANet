@@ -424,4 +424,16 @@ MCANet can be integrated into clinical workflows by serving as an automated tool
 
 To adapt MCANet for other histological or biomedical image types, the input channels (`n_channels`) and output classes (`n_classes`) can be adjusted to match the specific imaging modality and segmentation targets, such as nuclei, blood vessels, or tumors. Additionally, domain-specific data augmentation and transfer learning strategies can be employed to fine-tune the model on new datasets. The modular attention mechanisms (CDA and PMA) can be customized or scaled according to the complexity and structural characteristics of the target images, enabling broad applicability across various biomedical imaging tasks.
 
+# Citation
+If you find this repo useful, please cite our paper.
+
+```
+@article{yu2025multi,
+  title={Multi-Scale Cross-Dimensional Attention Network for Gland Segmentation},
+  author={Yu, Chaozhi and Cheng, Hongnan and Huang, Yufei and Lin, Zhizhe and Zhou, Teng},
+  journal={IEEE Signal Processing Letters},
+  year={2025},
+  publisher={IEEE}
+}
+```
 
